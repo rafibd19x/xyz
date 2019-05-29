@@ -17,11 +17,11 @@
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-var fx1 = getParameterByName('value');
+var fxx = getParameterByName('value');
       var fxWidget = new TradingView.widget({
 	  "width": 1000,
 	  "height": 700,
-	  "symbol": "Binance:"+fx1,
+	  "symbol": "Binance:"+fx,
 	  "interval": "1",
 	  "timezone": "Etc/UTC",
 	  "theme": "White",
