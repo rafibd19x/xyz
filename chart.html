@@ -18,10 +18,26 @@
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 var fxx = getParameterByName('value');
+
+
+
+function getParameterByNam(name, url) {
+    if (!url) {
+      url = "6778?"+fxx;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?:]" + name + "(=([^:#]*)|:|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var fx = getParameterByNam('yyyy');
+    
       var fxWidget = new TradingView.widget({
 	  "width": 1000,
 	  "height": 700,
-	  "symbol": "Binance:"+fxx,
+	  "symbol": "Binance:"+fx,
 	  "interval": "1",
 	  "timezone": "Etc/UTC",
 	  "theme": "White",
