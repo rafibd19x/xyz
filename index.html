@@ -1,13 +1,13 @@
-<html>
+﻿<html>
   <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-git1.min.js"></script>
      <script>
       $(document).on('change','.fx',function(){
        //var widget = changeFX(this.value);
-          $('#content').load("chart.html");
+        document.getElementById('content').src = "chart.html?value="+this.value;
         
-           $('#contentt').load("chartt.html");
+         document.getElementById('content2').src = "chartt.html?value="+this.value;
        
        });
 </script>
@@ -31,8 +31,9 @@
 <br>
 <br>
     
-<div id="content"></div>
+<div ="chart.html" id="content" >
 
+</div>
     	<br>
 <br>
 <br>
@@ -49,10 +50,9 @@
 <br>
 <br>
     
-<div id="contentt"></div>
+    <div src="chartt.html" id="content2" >
 
-
-</iframe>
+</div>
     
   </body>
 <br>
