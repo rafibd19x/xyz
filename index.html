@@ -5,9 +5,9 @@
      <script>
       $(document).on('change','.fx',function(){
        //var widget = changeFX(this.value);
-        document.getElementById('content').src = "chart.html?value="+this.value;
+          $('#content').load("chart.html");
         
-         document.getElementById('content2').src = "chartt.html?value="+this.value;
+           $('#contentt').load("chartt.html");
        
        });
 </script>
@@ -31,9 +31,8 @@
 <br>
 <br>
     
-<iframe src="chart.html" id="content" >
+<div id="content"></div>
 
-</iframe>
     	<br>
 <br>
 <br>
@@ -50,7 +49,8 @@
 <br>
 <br>
     
-    <iframe src="chartt.html" id="content2" >
+<div id="contentt"></div>
+
 
 </iframe>
     
