@@ -1,15 +1,22 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <<select id="the_name">
+    <option value="Xxx1">1</option>
+    <option value="yyy">2</option>
+    <option value="zzz">3</option>
+</select>
+<input type="button" id="change" value="next" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script>
       var dd = $('#the_name');
 var max_len = dd.find('option').length;
 $('#change').click(function () {
     var x = dd.find('option:selected').index();
     if (max_len == x + 1) x = -1;
-    dd.find('option').eq(x + 1).prop('selected', true);
-       //var widget = changeFX(this.value);
+    dd.find('option').eq(x + 1).prop('selected', true);    
+      
         document.getElementById('content').src = "chart.html?value="+this.value;
         
          document.getElementById('content2').src = "chartt.html?value="+this.value;
@@ -64,25 +71,5 @@ $('#change').click(function () {
 <br>
 <br>
 <br>
-  <center>
-  <select id="the_name">
-     
-              <option value="xxxx=btcusdt:yyyy=ethusdt">xxxx=btcusdt:yyyy=ethusdt</option>
-              <option value="xxxx=ltcusdt:yyyy=xrpusdt">xxxx=ltcusdt:yyyy=xrpusdt</option>
-     
-              <option value="EURgggdxxxUSD">EURgggdxxxUSD</option>
-              <option value="EURJgggPY">EURJgggPY</option>
-         <option value="E1URgUSD">E1URgUSD</option>
-              <option value="EUggg2RJPY">EUggg2RJPY</option>
-     
-              <option value="EU3RgggdxxxUSD">EU3RgggdxxxUSD</option>
-              <option value="EURJgg4gPY">EURJgg4gPY</option>
-         <option value="EURg5USD">EURg5USD</option>
-              <option value="EUggg6RJPY">EUggg6RJPY</option>
-     
-              <option value="EURggg8dxxxUSD">EURggg8dxxxUSD</option>
-              <option value="EURJggg9PY">EURJggg9PY</option>
-</select>
-<input type="button" id="change" value="next" />
-</center>
+  
 </html>
