@@ -3,7 +3,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-git1.min.js"></script>
      <script>
-      $(document).on('change','.fx',function(){
+      var dd = $('#the_name');
+var max_len = dd.find('option').length;
+$('#change').click(function () {
+    var x = dd.find('option:selected').index();
+    if (max_len == x + 1) x = -1;
+    dd.find('option').eq(x + 1).prop('selected', true);
        //var widget = changeFX(this.value);
         document.getElementById('content').src = "chart.html?value="+this.value;
         
@@ -61,7 +66,7 @@
 <br>
 <br>
   <center>
-  <select name="fx" class="fx">
+  <select id="the_name">
      
               <option value="xxxx=btcusdt:yyyy=ethusdt">xxxx=btcusdt:yyyy=ethusdt</option>
               <option value="xxxx=ltcusdt:yyyy=xrpusdt">xxxx=ltcusdt:yyyy=xrpusdt</option>
@@ -79,5 +84,6 @@
               <option value="EURggg8dxxxUSD">EURggg8dxxxUSD</option>
               <option value="EURJggg9PY">EURJggg9PY</option>
 </select>
+<input type="button" id="change" value="next" />
 </center>
 </html>
