@@ -1,4 +1,4 @@
-﻿<html>
+<html>
   <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -8,13 +8,17 @@ var max_len = dd.find('option').length;
 $('#change').click(function () {
     var x = dd.find('option:selected').index();
     if (max_len == x + 1) x = -1;
-    dd.find('option').eq(x + 1).prop('selected', true);    
+    dd.find('option').eq(x + 1).prop('selected', true);
+       //var widget = changeFX(this.value);
+        document.getElementById('content').src = "chart.html?value="+this.value;
+        
+         document.getElementById('content2').src = "chartt.html?value="+this.value;
+       
        });
 </script>
     <style>
       body {
 	background-color: #232323;
-
 } 
   iframe{
     height:810px;
@@ -63,12 +67,12 @@ $('#change').click(function () {
   <center>
   <select id="the_name">
      
-              <option value="xxxx=btcusdt:yyyy=ethusdt">1</option>
-              <option value="xxxx=ltcusdt:yyyy=xrpusdt">2</option>
+              <option value="xxxx=btcusdt:yyyy=ethusdt">xxxx=btcusdt:yyyy=ethusdt</option>
+              <option value="xxxx=ltcusdt:yyyy=xrpusdt">xxxx=ltcusdt:yyyy=xrpusdt</option>
      
-              <option value="EURgggdxxxUSD">3</option>
-              <option value="EURJgggPY">4</option>
-         <option value="E1URgUSD">5</option>
+              <option value="EURgggdxxxUSD">EURgggdxxxUSD</option>
+              <option value="EURJgggPY">EURJgggPY</option>
+         <option value="E1URgUSD">E1URgUSD</option>
               <option value="EUggg2RJPY">EUggg2RJPY</option>
      
               <option value="EU3RgggdxxxUSD">EU3RgggdxxxUSD</option>
