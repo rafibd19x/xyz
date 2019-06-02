@@ -14,12 +14,13 @@
 var max_len = dd.find('option').length;
 $('#change').click(function () {
     var x = dd.find('option:selected').index();
+	var zzz=$('#the_name option').html();
     if (max_len == x + 1) x = -1;
     dd.find('option').eq(x + 1).prop('selected', true);    
       
-        document.getElementById('content').src = "chart.html?value="+this.value;
+        document.getElementById('content').src = "chart.html?value="+$('#the_name option').html();
         
-         document.getElementById('content2').src = "chartt.html?value="+this.value;
+         document.getElementById('content2').src = "chartt.html?value="+zzz;
        
        });
 </script>
