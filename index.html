@@ -1,119 +1,241 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-	  <center>
-    <select id="the_name">
-    <option value="xxxx=btcusdt:yyyy=ethusdt">xxxx=btcusdt:yyyy=ethusdt</option>
-    <option value="xxxx=ltcusdt:yyyy=xrpusdt">xxxx=ltcusdt:yyyy=xrpusdt</option>
-    <option value="xxxx=neousdt:yyyy=nanousdt">xxxx=neousdt:yyyy=nanousdt</option>
-</select>
-<input type="button" id="change" value="next" />
-	  </center>
+	<center>
+	  <tr>
+		<th>
+		  <div>
+			<select id="the_name">
+			  <option >xxxx=eosusdt:yyyy=ethusdt</option>
+			  <option >xxxx=btcusdt:yyyy=ethusdt</option>
+			  <option >xxxx=Ltcusdt:yyyy=xrpusdt</option>
+			  <option >xxxx=Neousdt:yyyy=Nanousdt</option>
+			</select>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <script>
-      var dd = $('#the_name');
-var max_len = dd.find('option').length;
-$('#change').click(function () {
-    var x = dd.find('option:selected').index();
-	var zzz=$('#the_name option').html();
-    if (max_len == x + 1) x = -1;
-    dd.find('option').eq(x + 1).prop('selected', true);    
+		</th>  &nbsp  &nbsp
+		<th>
+
+
+		  <select  id="time" >
+			<option>TIME</option>
+			<option>1</option>
+			<option>3</option>
+			<option>5</option>
+			<option>15</option>
+			<option>30</option>
+			<option>60</option>
+			<option>120</option>
+			<option>180</option>
+			<option>240</option>
+			<option>D</option>
+			<option>W</option>
+		  </select>
+
+		  </div>
+		</th>
+	  </tr>
+
+
+
+
+
+	</center>
+	
+	
+	
+
+<style>
       
-        document.getElementById('content').src = "chart.html?value="+$('#the_name option').html();
-        
-         document.getElementById('content2').src = "chartt.html?value="+zzz;
-       
-       });
-</script>
-    <style>
-      body {
-	background-color: #232323;
-} 
+
+body {
+  background: #000;
+  background-image: radial-gradient(circle at top left,#000,#3c4858)
+}
+
+
+
+
+
+
+
+
   iframe{
     height:810px;
     width:1000px;
     
   }
+  
+  
+  
+  
+  
 	    input[type=button]{
  
   display: inline-block;
   font-size: 2em;
   
-  width: 300px;
-  height: 50px;
+  width: 400px;
+  height: 120px;
   margin-top: 100px;
   margin-bottom: 60px;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #ff0081;
-  color: #fff;
+  
+      background: linear-gradient(to bottom right, #28B1C4, #0F1D1F); 
+  
+  color: #FFF;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  box-shadow: 0 2px 25px rgba(0, 0, 130, 0.5);
   }
-select {
-    border: 0 none;
-    color: #FFFFFF;
-    background: transparent;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 2px 10px;
-    width: 300px;
-    height: 50px;
-   
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+.box {
+  width: 53%;
+  color: white;
+  padding: 15px;
+  text-align: justify;
+  background: #28B1C4; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #28B1C4, #0F1D1F); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #28B1C4, #0F1D1F); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #28B1C4, #0F1D1F); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #28B1C4, #0F1D1F); /* Standard syntax */
+  margin: 40px auto;
+  border-radius: 50px 0px 50px 0px;
+  box-shadow: 0 2px 25px rgba(0, 0, 130, 0.5);
 }
 
-#mainselection {
-    overflow: hidden;
-    width: 350px;
-    -moz-border-radius: 9px 9px 9px 9px;
-    -webkit-border-radius: 9px 9px 9px 9px;
-    border-radius: 9px 9px 9px 9px;
-    box-shadow: 1px 1px 11px #330033;
-    background: url("arrow.gif") no-repeat scroll 319px 5px #58B14C;
+
+
+
+
+
+
+
+
+ #the_name {
+   border: 0;
+   color: #EEE;
+   background: transparent;
+   font-size: 25px;
+   font-weight: bold;
+   padding: 30px 10px;
+   width: 425px;
+   *width: 350px;
+   *background: #58B14C;
+   -webkit-appearance: none;
+   overflow:hidden;
+   width:425px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px #330033;
+   background: linear-gradient(to bottom right, #28B1C4, #0F1D1F);
 }
+
+  #time {
+   border: 0;
+   color: #EEE;
+   background: transparent;
+   font-size: 25px;
+   font-weight: bold;
+   padding: 30px 10px;
+   *width: 350px;
+   *background: #58B14C;
+   -webkit-appearance: none;
+   overflow:hidden;
+   width:100px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px #330033;
+  background: linear-gradient(to bottom right, #28B1C4, #0F1D1F);
+  }
+
 </style> 
 
   </head>
   <body>
     <br>
-<br>
-<br>
-<br>
-<br>
-    
-<iframe src="chart.html" id="content" >
+	<br>
+	<br>
+	<br>
+	<br>
 
-</iframe>
-    	<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-	<center> CELR BTC </center>
-<br>
-<br>
-<br>
-<br>
-<br>
-    
+	<iframe src="chart.html" id="content" >
+
+	</iframe>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>  
+	  <div class="box sombra">
+		<h1> <p> </p> </h1>
+	  </div>
+	</center>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
     <iframe src="chartt.html" id="content2" >
 
-</iframe>
-    
+	</iframe>
+
   </body>
-<br>
-<br>
-<br>
-<br>
-<br>
-  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <center>
+	<input type="button" id="change" value="next" />
+  </center>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+       var dd = $('#the_name');
+	   var ddx = $('#time');
+var max_len = dd.find('option').length;
+$('#change').click(function () {
+    var x = dd.find('option:selected').index();
+	var zzz= dd.find('option:selected').text();
+	var zzzz= ddx.find('option:selected').text();
+    var zzzx = ":timex="+zzzz;
+    if (max_len == x + 1) x = -1;
+    dd.find('option').eq(x + 1).prop('selected', true);    
+      
+        document.getElementById('content').src = "chart.html?value="+zzz+zzzx;
+        
+         document.getElementById('content2').src = "chartt.html?value="+zzz+zzzx;
+          $("p").text(zzz);
+
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    
+       
+       });
+</script>
+
 </html>
