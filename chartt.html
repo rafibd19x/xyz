@@ -33,12 +33,13 @@ function getParameterByNam(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 var fx = getParameterByNam('yyyy');
+var xfx = getParameterByNam('timex');	   	    
     
       var fxWidget = new TradingView.widget({
 	  "width": 1000,
 	  "height": 810,
 	  "symbol": "Binance:"+fx,
-    "interval": "240",
+    "interval": ""+xfx,
   "timezone": "exchange",
   "theme": "Light",
   "style": "1",
