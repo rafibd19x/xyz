@@ -32,8 +32,11 @@ function getParameterByNam(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-var fx = getParameterByNam('yyyy');
-var xfx = getParameterByNam('timex');	   	    
+var fx = getParameterByNam('xxxx');
+	   
+var xfx = getParameterByNam('timex');	    
+
+
     
       var fxWidget = new TradingView.widget({
 	  "width": 1000,
@@ -49,7 +52,7 @@ var xfx = getParameterByNam('timex');
   "hide_top_toolbar": true,
   "allow_symbol_change": true,
     "studies": [
-    "MACD@tv-basicstudies"
+    "MASimple@tv-basicstudies"
   ],
   "container_id": "tradingview_76b31"
 	}); 
