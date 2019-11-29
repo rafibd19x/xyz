@@ -51,9 +51,14 @@ var xfx = getParameterByNam('timex');
   "enable_publishing": false,
   "hide_top_toolbar": true,
   "allow_symbol_change": true,
-    "studies": [
-    "MASimple@tv-basicstudies":30
-  ],
+     "details": true,
+        "studies_overrides": {
+            "moving average exponential.length": 20
+        },
+        "studies": [
+            "MAExp@tv-basicstudies"
+        ],
+
   "container_id": "tradingview_76b31"
 	}); 
     </script>
