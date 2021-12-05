@@ -51,19 +51,23 @@ var xfx = getParameterByNam('timex');
   "enable_publishing": false,
   "hide_top_toolbar": true,
   "allow_symbol_change": true,
-	   "studies": [
-		      
-		   {
-     "id": "MAExp@tv-basicstudies",
-     "version": 60,
-     "inputs": {
-       "length": 80
-     }
-		   },
-  
-		   {
-		       "BB@tv-basicstudies"
-		   }],
+	 "studies": [
+	
+    {
+      id: "BB@tv-basicstudies",
+      inputs: {
+        length: 25
+      },
+
+    },
+    {
+      id: "MASimple@tv-basicstudies",
+      inputs: {
+        length: 200
+      }
+
+    }
+	],
   "container_id": "tradingview_76b31"
 	}); 
     </script>
